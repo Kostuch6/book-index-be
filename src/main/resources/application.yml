@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/book-index
+    username: root
+    password: ????
+    driverClassName: org.mariadb.jdbc.Driver
+    hikari:
+      maximumPoolSize: 5
+  jackson:
+    default-property-inclusion: non_null
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDB103Dialect
+    hibernate:
+      ddl_auto: update
+    show-sql: false
+server:
+  compression:
+    enabled: true
